@@ -1,19 +1,22 @@
-function Hero({
-  link,
-  setlink,
-  submit,
-  isLoad
-}: {
-  link: string;
-  setlink: any;
-  submit: any;
-  isLoad:boolean
-}) {
+
+interface props{
+  link:string,
+  setlink:(value:string)=>void,
+  submit:(e:any)=>void,
+  isLoad:boolean,
+  erorr:string
+}
+
+function Hero({link,setlink,submit,isLoad,erorr}:props) {
   return (
     <div>
       <div className="font-sans container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         {/*Left Col*/}
         <div className="flex flex-col w-full xl:w-2/2 justify-center  lg:items-center overflow-y-hidden">
+          
+        <p className=" leading-normal text-base md:text-2xl  text-white  text-center md:text-left">
+            Let Us Summarize Your YouTube Content!
+          </p>
           <h1 className="my-1 text-3xl md:text-6xl text-white opacity-75 font-bold leading-tight text-center  md:text-left">
             Unlock
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
@@ -21,12 +24,13 @@ function Hero({
             </span>
             Insights
           </h1>
-          <p className=" leading-normal text-base md:text-2xl text-white mb-8 text-center md:text-left">
-            Let Us Summarize Your YouTube Content!
+         
+          <p className="leading-normal text-base md:text-base font-thin text-white mb-8 mt-1 tracking-widest text-center md:text-left">
+          This service provides video summaries, not subtitles or transcripts.
           </p>
 
           <form
-            onSubmit={(e) => submit(e)}
+            onSubmit={(e:any) => submit(e)}
             className="bg-gray-900 opacity-75  xl:w-2/6 shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4"
           >
             <div className="mb-4">
@@ -45,16 +49,21 @@ function Hero({
               >
                 {!isLoad ? 
                 "Summarize" :
+                <>
                 <div className="loader place-content-center">
                   <span className="bar"></span>
                   <span className="bar"></span>
                   <span className="bar"></span>
                 </div>
+                <p>Analyzing...</p>
+                </>
                 }
                 
               </button>
-              
+            
+                
             </div>
+            <p className="text-red-500 text-center">{erorr}</p>
           </form>
         </div>
       </div>

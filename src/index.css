@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 .loader {
     display: flex;
     align-items: center;
@@ -37,4 +38,9 @@
     }
   }
 
-  
+  .logoText {
+    font-family: "Coiny", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+  }
