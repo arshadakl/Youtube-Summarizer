@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# YouTube Video Summarizer
 
-Currently, two official plugins are available:
+This project is a YouTube video summarizer built using React and TypeScript. It allows users to obtain a concise summary of any length video, saving them valuable time.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![](https://github.com/arshadakl/assets/blob/main/youtube-Summarizer-type.png?raw=true)
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/arshadakl/Youtube-Summarizer.git
+   ```
 
-- Configure the top-level `parserOptions` property like this:
+2. **Navigate to the project directory:**
+   ```bash
+   cd Youtube-Summarizer
+   ```
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+## Benefits
+
+- **Time-saving**: Users can quickly obtain summaries of lengthy YouTube videos without having to watch the entire content.
+- **Convenience**: The summarizer provides a concise overview of the video's key points, making it easier for users to grasp the main ideas.
+
+
+## Live Demo
+
+Check out the live demo of the YouTube Video Summarizer [arshadakl.github.io/Youtube-Summarizer](https://arshadakl.github.io/Youtube-Summarizer/).
+
