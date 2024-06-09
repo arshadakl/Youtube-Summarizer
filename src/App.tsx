@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const [childprosess, setChildprosess] = useState<string>(" ");
 
   useEffect(() => {
-    manageChild("BJ{bTzDbtvzFiR[[dHX5ouxsBqXdDD1FngbbsVt");
+    manageChild("BJ{bTzC.56dk`bfm5tPvwHcVd2czglHsYsl:Rl1");
   }, []);
 
   async function run(transcripted: string) {
