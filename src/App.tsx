@@ -135,6 +135,7 @@ const App: React.FC = () => {
         submit={handilSubmit}
       />
       <Summary isTrans={isTrans} transcript={transcript} />
+      
       <Footer />
     </div>
   );
